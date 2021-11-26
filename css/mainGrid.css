@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuentes utilizadas en la web */
+@font-face{
+	font-family: 'montserrat';
+	src: url('../fonts/Montserrat-Regular.ttf') format("truetype");
+}
+@font-face{
+	font-family: 'montserratB';
+	src: url('../fonts/Montserrat-Bold.ttf') format("truetype");
+}
+
+
+/*  HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30px;
+}
+
+.ico-menu {
+    background: url(../img/icon-burger.svg) no-repeat;
+    width: 24px;
+    height: 16px;
+}
+
+.ico-cart {
+    background: url(../img/icon-cart.svg) no-repeat;
+    width: 18px;
+    height: 19px;
+}
+
+.logo{
+    text-align: center;
+}
+
+.logo img {
+    max-width: 50%;
+}
+
+
+
+.container-content {
+    margin: 0 30px;
+}
+
+/* TITULO Y FILTRO */
+.container-title-filter {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: 'montserrat';
+    font-size: 14px;
+    color: #1b1b1b;
+}
+
+label.label-text-color {
+    font-family: 'montserratB';
+    font-size: 16px;
+    color: #1b1b1b;
+    margin-right: 30px;
+}
+label.label-color {
+    font-family: 'montserrat';
+    font-size: 16px;
+    color: #1b1b1b;
+}
+
+a.check-filter{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #1b1b1b;
+    cursor: pointer;
+}
+
+a.check-filter:active{
+    background-color: #1b1b1b;
+}
+
+.active{
+    background-color: #1b1b1b;
+}
+
+.margin-right-filter {
+    margin-right: 30px;
+}
+
+
+/* FOTOS */
+.container-photos{
+    margin: 50px 0px;
+
+
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "photoRow1Colum1 photoRow1Colum2 photoRow1Colum3 photoRow1Colum4"
+                         "photoRow2Colum1 photoRow2Colum1 photoRow2Colum3 photoRow2Colum4"
+                         "photoRow3Colum1 photoRow3Colum1 photoRow3Colum3 photoRow3Colum3"
+                         "photoRow4Colum1 photoRow4Colum2 photoRow4Colum2 photoRow4Colum4";
+}
+
+
+div.content-photos.photo1{
+    grid-area: photoRow1Colum1;
+}
+div.content-photos.photo2{
+    grid-area: photoRow1Colum2;
+}
+div.content-photos.photo3{
+    grid-area: photoRow1Colum4;
+}
+div.content-photos.photo4{
+    grid-area: photoRow2Colum1;
+}
+div.content-photos.photo5{
+    grid-area: photoRow2Colum4;
+}
+div.content-photos.photo6{
+    grid-area: photoRow3Colum1;
+}
+div.content-photos.photo7{
+    grid-area: photoRow3Colum3;
+}
+div.content-photos.photo8{
+    grid-area: photoRow4Colum2;
+}
+
+
+.grid-column1{
+    grid-column: span 1;
+}
+
+img.photo-type-1 {
+    max-height: 600px;
+}
+
+img.photo-type-2 {
+    max-height: 1200px;
+}
+
+img.end {
+    margin-right: 0px;
+}
+
+.margin-end {
+    margin: 0 0 0 auto;
+}
+
+.margin-0-auto {
+    margin: 0 auto;
+}
+
+.content-description-photo{
+    margin: 20px 0;
+}
+
+h5{
+    font-family: 'montserrat';
+    font-size: 12px;
+    color: #1b1b1b;
+}
+
+.description-glasses{
+    font-family: 'montserrat';
+    font-size: 12px;
+    color: #1b1b1b;
+    padding: 4px 0;
+}
+.model-glasses{
+    font-family: 'montserratB';
+    font-size: 12px;
+    color: #1b1b1b;
+}
+.price-glasses{
+    font-family: 'montserrat';
+    font-size: 12px;
+    color: #1b1b1b;
+    margin-top: 12px;
+}
+
+.grid-filter{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, auto);
+}
+
+
+/** Responsive **/
+@media (max-width: 1280px){
+    img.photo-type-1 {
+        max-height: 500px;
+        max-width: 100%;
+    }
+    
+    img.photo-type-2 {
+        max-height: 900px;
+    }
+}
+
+@media (max-width: 900px){
+    .container-photos{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, auto);
+    
+        grid-template-areas: "photoRow1Colum1 photoRow1Colum2"
+                             "photoRow2Colum1 photoRow2Colum2"
+                             "photoRow3Colum1 photoRow3Colum1"
+                             "photoRow4Colum1 photoRow4Colum2"
+                             "photoRow5Colum1 photoRow5Colum2"
+                             "photoRow6Colum1 photoRow6Colum1";
+    }
+
+    div.content-photos.photo3{
+        grid-area: photoRow2Colum1;
+    }
+    div.content-photos.photo4{
+        grid-area: photoRow3Colum1;
+    }
+    div.content-photos.photo5{
+        grid-area: photoRow4Colum1;
+    }
+    div.content-photos.photo6{
+        grid-area: photoRow4Colum2;
+    }
+    div.content-photos.photo7{
+        grid-area: photoRow5Colum1;
+    }
+    div.content-photos.photo8{
+        grid-area: photoRow6Colum1;
+    }
+
+    img.photo-type-1 {
+        max-height: 500px;
+        max-width: 100%;
+    }
+    
+    img.photo-type-2 {
+        max-height: 900px;
+        max-width: 100%;
+    }
+} 
+
+@media (max-width: 768px){
+    label.label-text-color {
+        font-size: 14px;
+        margin-right: 20px;
+    }
+    label.label-color {
+        font-size: 14px;
+    }
+    
+    a.check-filter{
+        width: 14px;
+        height: 14px;
+    }
+    .margin-right-filter {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 480px){
+    .container-content {
+        margin: 0 10px;
+    }
+    label.label-text-color {
+        margin-right: 10px;
+    }
+    .margin-right-filter {
+        margin-right: 10px;
+    }
+}
+
+

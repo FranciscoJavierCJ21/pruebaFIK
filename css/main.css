@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuentes utilizadas en la web */
+@font-face{
+	font-family: 'montserrat';
+	src: url('../fonts/Montserrat-Regular.ttf') format("truetype");
+}
+@font-face{
+	font-family: 'montserratB';
+	src: url('../fonts/Montserrat-Bold.ttf') format("truetype");
+}
+
+.margin-right-30 {
+    margin-right: 30px;
+}
+
+/*  HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30px;
+}
+
+.ico-menu {
+    background: url(../img/icon-burger.svg) no-repeat;
+    width: 24px;
+    height: 16px;
+}
+
+.ico-cart {
+    background: url(../img/icon-cart.svg) no-repeat;
+    width: 18px;
+    height: 19px;
+}
+
+.logo img {
+    max-width: 50%;
+}
+
+
+
+.container-content {
+    margin: 0 30px;
+}
+
+/* TITULO Y FILTRO */
+.container-title-filter {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: 'montserrat';
+    font-size: 14px;
+    color: #1b1b1b;
+}
+
+label.label-text-color {
+    font-family: 'montserratB';
+    font-size: 16px;
+    color: #1b1b1b;
+    margin-right: 30px;
+}
+label.label-color {
+    font-family: 'montserrat';
+    font-size: 16px;
+    color: #1b1b1b;
+}
+
+a.check-filter{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #1b1b1b;
+    cursor: pointer;
+}
+
+a.check-filter:active{
+    background-color: #1b1b1b;
+}
+
+.active{
+    background-color: #1b1b1b;
+}
+
+
+/* FOTOS */
+.container-photos{
+    margin: 50px 0px;
+}
+
+.container-row-photos {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.content-photos img.photo-type-1 {
+    max-height: 600px;
+    margin-right: 20px;
+}
+
+.content-photos img.photo-type-2 {
+    max-height: 1200px;
+    margin-right: 20px;
+}
+
+.content-photos img.end {
+    margin-right: 0px;
+}
+
+.margin-end {
+    margin: 0 0 0 auto;
+}
+
+.margin-0-auto {
+    margin: 0 auto;
+}
+
+.content-description-photo{
+    margin: 20px 0;
+}
+
+h5{
+    font-family: 'montserrat';
+    font-size: 12px;
+    color: #1b1b1b;
+}
+
+.description-glasses{
+    font-family: 'montserrat';
+    font-size: 12px;
+    color: #1b1b1b;
+    padding: 4px 0;
+}
+.model-glasses{
+    font-family: 'montserratB';
+    font-size: 12px;
+    color: #1b1b1b;
+}
+.price-glasses{
+    font-family: 'montserrat';
+    font-size: 12px;
+    color: #1b1b1b;
+    margin-top: 12px;
+}
+
+
+/** Responsive **/
+@media (max-width: 1280px){
+    .content-photos img.photo-type-1 {
+        max-height: 400px;
+    }
+    
+    .content-photos img.photo-type-2 {
+        max-height: 800px;
+    }
+}
+
+@media (max-width: 768px){
+    .content-photos img.photo-type-2 {
+        /* max-height: initial; */
+    }
+}
